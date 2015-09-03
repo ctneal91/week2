@@ -67,7 +67,12 @@ puts "Amy gets " + amy_bonus.to_s + " as a bonus."
 puts "Bender gets " + bender_bonus.to_s + " as a bonus."
 puts "Leela gets " + leela_bonus.to_s + " as a bonus."
 
+puts "3. Trips"
 
+puts "Fry made " + fry_trips.count.to_s + " trips this month."
+puts "Amy made " + amy_trips.count.to_s + " trips this month."
+puts "Bender made " + bender_trips.count.to_s +  " trips this month."
+puts "Leela made " + leela_trips.count.to_s + " trips this month."
 
 
 
