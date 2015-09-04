@@ -426,10 +426,11 @@ th {
   padding: 0;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
 }
-table {
+
+table, img {
   margin-left: 20px;
 }
 
