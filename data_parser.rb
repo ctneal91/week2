@@ -11,9 +11,9 @@ trip_revenue = []
 trip_revenue = logs.map { |h| h["Money"]}
                    .map(&:to_i) #to convert string to integers
 
-total_revenue = trip_revenue.reduce(:+)
+total_revenue = trip_revenue.reduce(:+).to_s
 
-puts "1. We made " + total_revenue.to_s + " money this week."
+puts "1. We made " + total_revenue + " money this week."
 
 fry_trips = []
 amy_trips = []
@@ -74,17 +74,12 @@ puts "Amy made " + amy_trips.count.to_s + " trips this month."
 puts "Bender made " + bender_trips.count.to_s +  " trips this month."
 puts "Leela made " + leela_trips.count.to_s + " trips this month."
 
-
-
-
-
-
 # all below is for the actual html part
-# b = binding
-# the_html = File.read("./report.erb")
-# compiled_html = ERB.new(the_html).result(b)
-#
-# puts compiled_html
-# #makes sure that the  can read this file's variables
-#
-# print logs
+b = binding
+the_html = File.read("./report.erb")
+compiled_html = ERB.new(the_html).result(b)
+
+puts compiled_html
+
+File.open("./final.html", "wb") {|f| f << compiled_html }
+#makes sure that the  can read this file's variables
