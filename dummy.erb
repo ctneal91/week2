@@ -1,14 +1,13 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
   </head>
 
   <body>
 
     <h1> We made <%=total_revenue%> this week. </h1>
     <p></p>
-    <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
+    <table>
       <thead>
         <tr>
           <th>Destination</th>
@@ -17,22 +16,19 @@
           <th>Money</th>
         </tr>
       </thead>
-      <tbody>
-        <% logs.each do |log| %>
+      <!-- <tbody>
         <tr>
-          <td><%= log["Destination"]%></td>
-          <td><%= log["Shipment"] %></td>
-          <td><%= log["Crates"] %></td>
-          <td><%= log["Money"] %></td>
+          <td><%=logs["Destination"]%></td>
+          <td><%=logs["Shipment"]%></td>
+          <td><%=logs["Crates"]%></td>
+          <td><%=logs["Money"]%></td>
         </tr>
-        <% end %>
-      </tbody>
+      </tbody> -->
     </table>
 
     <p></p>
-    <p></p>
 
-    <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
+    <table>
       <thead>
         <tr>
           <th>Employee</th>
@@ -40,7 +36,7 @@
           <th>Bonus</th>
         </tr>
       </thead>
-      <tbody>
+      <!-- <tbody>
         <tr>
           <td>Fry</td>
           <td><%=fry_trips.count%></td>
@@ -61,13 +57,8 @@
           <td><%=leela_trips.count%></td>
           <td><%=leela_bonus%></td>
         </tr>
-      </tbody>
+      </tbody> -->
     </table>
-
-    <p></p>
-    <img src="https://media.giphy.com/media/55xWvUIMb51mw/giphy.gif">
-    <img src="https://media.giphy.com/media/oktRrJuhxCZSU/giphy.gif" class="gif2">
-
 
 
   </body>
